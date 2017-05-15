@@ -1,0 +1,22 @@
+
+<div id="simple-calendar">
+  <table>
+    <tr>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+    <% @simple_calendar.each do |week| %>
+    <tr>
+      <% week.each do |day| %>
+        <td class="matrix <%= day[1] %>"><a href="/calendar/view/<%= day[0]%>"><%= day[0].day%></a></td> 
+
+      <% end %>
+    </tr>
+    <% end %>
+  </table>
+</div>
