@@ -2,6 +2,11 @@
   border: 2px solid;
   height: 150px;
   width: 150px;
-  font-size: 40px;
+  font-size: 20px;
+  padding-bottom: 110px;
+}
+
+.month {
   text-align: center;
+  font-size: 50px;
 }

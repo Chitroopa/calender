@@ -1,6 +1,7 @@
 
 <div id="simple-calendar">
   <table>
+    <h1 class="month"><%= @month %>  <%= @starting_date.year %></h1>
     <tr>
       <th>Sunday</th>
       <th>Monday</th>
@@ -13,8 +14,7 @@
     <% @simple_calendar.each do |week| %>
     <tr>
       <% week.each do |day| %>
-        <td class="matrix <%= day[1] %>"><a href="/calendar/view/<%= day[0]%>"><%= day[0].day%></a></td> 
-
+        <td class="matrix <%= day[1] %>"><a class = "day" href="/calendar/view/<%= day[0]%>"><%= day[0].day%></a></td>
       <% end %>
     </tr>
     <% end %>

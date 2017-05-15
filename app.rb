@@ -9,7 +9,8 @@ Dir[File.dirname(__FILE__) + '/lib/*.rb'].each { |file| require file }
 get('/') do
 # months_ago => to navigate before
 # months_since=> to navigate after
-  starting_date = Time.now.months_since(2).to_date
-  @simple_calendar = Calendar.new(starting_date).to_a
+  @starting_date = Time.now.months_since(0).to_date
+  @month = Date::MONTHNAMES[@starting_date.month]
+  @simple_calendar = Calendar.new(@starting_date).to_a
   erb(:index)
 end
